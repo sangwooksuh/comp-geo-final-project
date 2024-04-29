@@ -1,2 +1,6 @@
-# comp-geo-final-project
-Computational Geometry Final Project
+# Computational Geometry Final Project
+
+**name:** Sangwook Suh
+
+
+**description:** A graphical applet demonstrating a geometric algorithm.
