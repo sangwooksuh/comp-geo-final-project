@@ -55,7 +55,7 @@ class DisplayBoard:
             tk.Label(self.frm_alg, text="    H <- new Stack()", font=("Menlo", 11)), #3
             tk.Label(self.frm_alg, text="    H.push(p1); H.push(p2)", font=("Menlo", 11)), #4
             tk.Label(self.frm_alg, text="    FOR i=3 TO n:", font=("Menlo", 11)), #5
-            tk.Label(self.frm_alg, text="        WHILE |H| > 1 AND Orient(H.second, H.first, pi) < 0:", font=("Menlo", 11)), #6
+            tk.Label(self.frm_alg, text="        WHILE |H| > 1 AND Orient(H.second, H.first, pi) < 0:\t", font=("Menlo", 11)), #6
             tk.Label(self.frm_alg, text="            H.pop()", font=("Menlo", 11)), #7
             tk.Label(self.frm_alg, text="        H.push(pi)", font=("Menlo", 11)), #8
             tk.Label(self.frm_alg, text="    RETURN H.reverse()", font=("Menlo", 11)), #9
@@ -87,6 +87,9 @@ class DisplayBoard:
 
 
     def click_event(self, event):
+
+        if self.is_step_mode:
+            messagebox.showwarning("Warning: Showing Step", "Finish the current demo process to add more points!")
         self.canvas.create_oval(event.x-3, event.y-3, event.x+3, event.y+3, fill="black", tags="black")
         self.points.append((event.x, event.y))
 
@@ -128,6 +131,7 @@ class DisplayBoard:
         if self.current_step == 1:
             self.lbl_gs[1].config(bg="yellow")
             x, y = self.steps[1]
+            self.canvas.create_oval(x-10, y-10, x+10, y+10, outline="yellow", fill="yellow", tags="steps")
             self.canvas.create_oval(x-3, y-3, x+3, y+3, outline="red", fill="red", tags="steps")
 
         elif self.current_step == 2:
