@@ -20,7 +20,7 @@ I wrote the demo using Python's Tkinter package and some functions from NumPy, b
 Modules math, random, functools, and tkinter from Python's standard library are also used.
 Clone the repository, set up a python 3 virtual environment with numpy (environment.yml is included in repo), then run the following in the terminal:
 
-`$ python app.py`
+`$ python app.py` or `$ python3 app.py`
   
 ## Directions
 
