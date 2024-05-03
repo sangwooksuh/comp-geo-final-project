@@ -58,8 +58,10 @@ Example:
 
 - t=1:
 <img width="1083" alt="Chan loop1" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/0d4153b7-d1f6-44f7-9e34-6b51fefa4644">
+
 - t=2:
-<img width="1062" alt="grahamscan" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/519010f4-e594-478d-b137-8feea893301c">
+<img width="1083" alt="chan loop2" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/96cb46b1-46b9-4358-9d21-e1070db0166e">
+
 
 Example: Output Sensitive
 
