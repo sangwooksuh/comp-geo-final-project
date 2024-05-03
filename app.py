@@ -359,9 +359,8 @@ class DisplayBoard:
                 self.draw_ch(Hi, tag="steps", color=COLORS[i])
             for i, (x, y) in enumerate(step[2]):
                 self.canvas.create_oval(x-3, y-3, x+3, y+3, outline='red', fill='red', tag='steps')
-                if i < len(step[2]) - 1:
-                    x2, y2 = step[2][i+1]  
-                    self.canvas.create_line(x, y, x2, y2, fill='red', tags='steps', width=2)
+                x2, y2 = step[2][i+1]  if i < len(step[2]) - 1 else step[2][0]
+                self.canvas.create_line(x, y, x2, y2, fill='red', tags='steps', width=2)
         else: # step[0] == 'increment'
             self.lbl_chan[0].config(text=self.chan_firstline + f" // t: {step[1]}" , bg=self.bg)
             self.lbl_chan[2].config(bg='light yellow')
@@ -522,8 +521,8 @@ class DisplayBoard:
                 if demo: steps.append(('hull', H.copy(), [pt.copy() for pt in hull], (t, m, r)))
                 
                 if np.all(hull[0] == pi):
-                    if demo: steps.append(('final', H.copy(), [pt.copy() for pt in hull]))
-                    return steps if demo else hull
+                    if demo: steps.append(('final', H.copy(), [pt.copy() for pt in hull][:-1]))
+                    return steps if demo else hull[:-1]
                 p0, p1 = p1, pi
             t += 1
             if demo: steps.append(('increment', t))
