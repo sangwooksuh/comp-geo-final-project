@@ -37,9 +37,9 @@ During a demo, pseudocode of the current algorithm is displayed underneath the b
 - Finish: End the demo, highlight the returned convex hull in red.
 
 1. Graham Scan
-   - Implemented version from (Wikipedia)[https://en.wikipedia.org/wiki/Graham_scan].
+   - Implemented a 'radial sort' version from [Wikipedia](https://en.wikipedia.org/wiki/Graham_scan).
    - Find the lowest point then radially sort all others with respect to the lowest point.
-   - Pseudocode adapted from (Wikipedia)[https://en.wikipedia.org/wiki/Graham_scan] page and class slides.
+   - Pseudocode adapted from [Wikipedia](https://en.wikipedia.org/wiki/Graham_scan) page and class slides.
 
 3. Chan's Algorithm
    - Internally uses self-implemented Graham Scan.
