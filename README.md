@@ -8,7 +8,7 @@ This is a interactive GUI applet that demonstrates two 2D convex hull algorithms
 
 **Background**
 
-Chan's algorithm is a convex hull algorithm that has O(nlogn) worst-case performance while still providing an output-sensitive O(nlogh) time, by doing a Gift Wrap of partition convex hulls, and being smart about searching for parition sizes. Compared to Kirkpatrick-Seidel's ultimate convex hull algorithm, it is much easier to intuitively understand. I aimed to create a GUI demo for Chan's algorithm, and also included Graham Scan for completeness, as Chan's algorithm internally uses a O(nlogn) convex hull algorithm such as Graham Scan. I wrote the demo using Python's Tkinter package and some functions from NumPy, but mostly implemented the algorithm from scratch. I used a 'flipped approach' to accomodate the Tkinter's canvas coordinates starting at the top left instead of bottom right. Input points can be generated randomly or manually drawn by clicking. 
+Chan's algorithm is a convex hull algorithm that has O(nlogn) worst-case performance while still providing an output-sensitive O(nlogh) time, by doing a Gift Wrap of partition convex hulls, and being smart about searching for parition sizes. Compared to Kirkpatrick-Seidel's ultimate convex hull algorithm, it is much easier to intuitively understand. I aimed to create a GUI demo for Chan's algorithm, and also included Graham Scan for completeness, as Chan's algorithm internally uses a O(nlogn) convex hull algorithm such as Graham Scan. I wrote the demo using Python's Tkinter package and some functions from NumPy, but mostly implemented the algorithm from scratch. I used a _flipped approach_ (detailed in the Implementation Notes) section to accomodate the Tkinter's canvas coordinates starting at the top left instead of bottom right. Input points can be generated randomly or manually drawn by clicking. 
 
 **Dependancies** 
 
@@ -44,6 +44,8 @@ During a demo, pseudocode of the current algorithm is displayed underneath the b
    - Implemented a 'radial sort' version from [Wikipedia](https://en.wikipedia.org/wiki/Graham_scan).
    - Find the lowest point then radially sort all others with respect to the lowest point.
    - Pseudocode adapted from [Wikipedia](https://en.wikipedia.org/wiki/Graham_scan) page and class slides.
+   - Red: convex hull candidates. (points on stack)
+   - Blue: next point to be tested.
 
 Example:
 <img width="1062" alt="grahamscan" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/6d23c1b8-acfe-4dd3-b5c4-67323d7c78c5">
@@ -52,7 +54,7 @@ Example:
 2. **Chan's Algorithm**
    - Internally uses self-implemented Graham Scan.
    - Pseudocode adapted from class slides.
-   - Red represents the current convex hull candidates. Blue/yellow represents important points to highlight in the algorithm. Other Colors are chosen at random.
+   - Red represents the current convex hull candidates. Blue/yellow represents important points to highlight in the algorithm. Other Colors are chosen at random, to represent the paritions and their respective convex hulls.
 
 Example:
 
@@ -63,8 +65,8 @@ Example:
 <img width="1083" alt="chan loop2" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/96cb46b1-46b9-4358-9d21-e1070db0166e">
 
 
-Example: Output Sensitive
-
+Example: 
+- Output Sensitive
 <img width="1121" alt="chan output sensitive" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/001e220b-6131-40d3-8a63-c70517a149b4">
   
 ## Implementation Notes
