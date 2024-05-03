@@ -54,6 +54,7 @@ Example:
 2. **Chan's Algorithm**
    - Internally uses self-implemented Graham Scan.
    - Pseudocode adapted from class slides.
+   - Choice of internal variables (t, m, r) are visualized on the first line as a comment.
    - Red represents the current convex hull candidates. Blue/yellow represents important points to highlight in the algorithm. Other Colors are chosen at random, to represent the paritions and their respective convex hulls.
 
 Example:
