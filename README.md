@@ -71,7 +71,7 @@ General Example:
 <img width="1083" alt="chan loop2" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/96cb46b1-46b9-4358-9d21-e1070db0166e">
 
 
-Output Sensitive Example: 
+Early Termination Example: 
 - t=1:
 <img width="1121" alt="chan output sensitive" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/001e220b-6131-40d3-8a63-c70517a149b4">
   
