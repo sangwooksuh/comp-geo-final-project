@@ -27,18 +27,20 @@ Running the app opens up a GUI. The left part contains a white canvas of size (6
 The right side is a control panel with buttons. 
 
 - **Random:** Generate 20 random points on the canvas.
-- **Graham Scan:** Run the Graham Scan demo on the current points in the canvas. Once finished the canvas 
-- **Chan's Alg:** Run the Chan's Algorithm demo on the currnet points in the canvas.
+- **Graham Scan:** Run the Graham Scan demo on the current points in the canvas. Once finished, the convex hull is highlighted in red.
+- **Chan's Alg:** Run the Chan's Algorithm demo on the currnet points in the canvas. Once finished, the convex hull is highlighted in red.
 - **Reset:** Reset the canvas to an empty state.
 - **Close:** Close the applet.
 
 ## Algorithm Demos:
 
-During a demo, pseudocode of the current algorithm is displayed underneath the buttons. The current step of the algorithm is highlighted in yellow. There are three new navigation buttons:
+During a demo, pseudocode of the current algorithm is displayed underneath the buttons. During a demo, you cannot add new points. You need at least 3 (non-colinear) points to start a demo. The current step of the algorithm is highlighted in yellow. There are three new navigation buttons:
 
 - **Previous:** Go to the previous step of the algorithm.
 - **Next:** Go to the next step of the algorithm.
 - **Finish:** End the demo, highlight the convex hull returned by the algorithm in red.
+
+When a demo finishes, the output is highlighted in red. You can continue to add more points, run another demo, or reset the canvas.
 
 1. **Graham Scan**
    - Implemented a 'radial sort' version from [Wikipedia](https://en.wikipedia.org/wiki/Graham_scan).
