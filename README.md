@@ -6,6 +6,10 @@ CSE 546T Final Project: Sangwook Suh
 
 This is a interactive GUI applet that demonstrates two 2D convex hull algorithms, Graham Scan and Chan's algorithm.
 
+**Background**
+
+Chan's algorithm is a convex hull algorithm that has O(nlogn) worst-case performance while still providing an output-sensitive O(nlogh) time, by doing a Gift Wrap of partition convex hulls, and being smart about searching for parition sizes. Compared to Kirkpatrick-Seidel's ultimate convex hull algorithm, it is much easier to intuitively understand. I aimed to create a GUI demo for Chan's algorithm, and also included Graham Scan for completeness, as Chan's algorithm internally uses a O(nlogn) convex hull algorithm such as Graham Scan. I wrote the demo using Python's Tkinter package and some functions from NumPy, but mostly implemented the algorithm from scratch. I used a 'flipped approach' to accomodate the Tkinter's canvas coordinates starting at the top left instead of bottom right. Input points can be generated randomly or manually drawn by clicking. 
+
 **Dependancies** 
 
 - Python 3.12.3
@@ -41,10 +45,25 @@ During a demo, pseudocode of the current algorithm is displayed underneath the b
    - Find the lowest point then radially sort all others with respect to the lowest point.
    - Pseudocode adapted from [Wikipedia](https://en.wikipedia.org/wiki/Graham_scan) page and class slides.
 
+Example:
+<img width="1062" alt="grahamscan" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/6d23c1b8-acfe-4dd3-b5c4-67323d7c78c5">
+
+
 2. **Chan's Algorithm**
    - Internally uses self-implemented Graham Scan.
    - Pseudocode adapted from class slides.
    - Colors are chosen at random.
+
+Example:
+
+- t=1:
+<img width="1083" alt="Chan loop1" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/0d4153b7-d1f6-44f7-9e34-6b51fefa4644">
+- t=2:
+<img width="1062" alt="grahamscan" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/519010f4-e594-478d-b137-8feea893301c">
+
+Example: Output Sensitive
+
+<img width="1121" alt="chan output sensitive" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/001e220b-6131-40d3-8a63-c70517a149b4">
   
 ## Implementation Notes
 
