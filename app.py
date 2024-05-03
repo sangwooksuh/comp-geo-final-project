@@ -14,10 +14,9 @@ COLORS = [
     'dark sea green', 'sea green', 'medium sea green', 'light sea green', 'pale green', 
     'spring green', 'lawn green', 'medium spring green', 'green yellow', 'lime green', 
     'yellow green', 'forest green', 'olive drab', 'dark khaki', 'khaki', 
-    'pale goldenrod', 'light goldenrod yellow', 'light yellow', 'gold', 
-    'light goldenrod', 'goldenrod', 'rosy brown', 'indian red', 'saddle brown', 
-    'sandy brown', 'salmon', 'light salmon', 'orange', 'dark orange', 'coral', 
-    'light coral', 'tomato', 'hot pink', 'deep pink', 'pink','pale violet red', 
+    'pale goldenrod',  'light yellow', 'gold', 'goldenrod', 'rosy brown', 'indian red', 
+    'saddle brown', 'sandy brown', 'salmon', 'light salmon', 'orange', 'dark orange', 
+    'coral', 'light coral', 'tomato', 'hot pink', 'deep pink', 'pink','pale violet red', 
     'maroon', 'violet red', 'medium orchid', 'purple', 'medium purple',
 ]
 
@@ -147,7 +146,7 @@ class DisplayBoard:
             # if i >= 4: break
 
 
-    def rand_event(self, n=16):   
+    def rand_event(self, n=20):   
         for _ in range(n):
             x, y = random.randint(15,585), random.randint(15,585)
             self.canvas.create_oval(x-3, y-3, x+3, y+3, fill="black", tags="black")
