@@ -50,7 +50,8 @@ During a demo, pseudocode of the current algorithm is displayed underneath the b
 
 1. **Flipped Algorithm:** `Tkinter`, the Python standard library's GUI module, has a coordinate system with the origin (0,0) at the _top left_: thus the y-coordinate _increases_ as you go _down_. I implemented a flipped version of the algorithm to match the pseudocode: (Graham Scan) I find the higest point, then sort the points radially in a clockwise order with respect to the original point. This visually shows to the user as first finding the lowest boundary point, and proceeding the algorithm in a counterclockwise direction. Similar adjustments are made to Chan's algorithm.
 2. **General Position:** It is assumed that the points given are in general position. For instance the Graham Scan might fail if three points, including the lower boundary point are colinear, because two points would share the same angle at the lower boundary point. There is no checking or validation for general position or numerical stability issues.
-3. **Tkinter Click Register Bug:** TKinter canvas seems to have an issue where it sometimes fails to register click events if they are done too fast succesively, or if the mouse does not move betwen clicks, especially on the newer MacOS. It seems to happen randomly sometimes. 
+3. **Tkinter Click Register Bug:** TKinter canvas seems to have an issue where it sometimes fails to register click events if they are done too fast succesively, or if the mouse does not move betwen clicks, especially on the newer MacOS. It seems to happen randomly sometimes.
+4. **Choice of Random=20:** The random button produces 20 points. I found this to be a good number to see how Chan's algortihm works, as in a general case, it will go up to t=2, with the set partitioned into 5, and 2 at each loop. Depending on the configuration, 20 points could sometimes still terminate whilt t=1, (i.e. if the convex hull is a simple triangle or quadrilateral).
 
    
 
