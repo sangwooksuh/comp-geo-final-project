@@ -1,6 +1,9 @@
 # Computational Geometry Final Project
 
-**name:** Sangwook Suh
+## Convex Hull Algorithm Demo Applet
 
+**Algorithms:**
 
-**description:** A graphical applet demonstrating a geometric algorithm.
+1. Graham Scan
+
+2. Chan's Algorithm
