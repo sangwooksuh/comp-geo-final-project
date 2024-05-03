@@ -58,7 +58,7 @@ Example:
    - Red represents the current convex hull candidates. Blue/yellow represents important points to highlight in the algorithm. Other Colors are chosen at random, to represent the paritions and their respective convex hulls.
    - Visually highlights paritioning, convex hulls of the partitions, candiates (q_j's) from each partition, choosing the next p_i from the candidates, testing for termination.
 
-Example:
+General Example:
 
 - t=1:
 <img width="1083" alt="Chan loop1" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/0d4153b7-d1f6-44f7-9e34-6b51fefa4644">
@@ -67,8 +67,8 @@ Example:
 <img width="1083" alt="chan loop2" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/96cb46b1-46b9-4358-9d21-e1070db0166e">
 
 
-Example: 
-- Output Sensitive
+Output Sensitive Example: 
+- t=1:
 <img width="1121" alt="chan output sensitive" src="https://github.com/sangwooksuh/comp-geo-final-project/assets/77888267/001e220b-6131-40d3-8a63-c70517a149b4">
   
 ## Implementation Notes
